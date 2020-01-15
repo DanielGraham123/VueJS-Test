@@ -5,7 +5,7 @@
 
       <v-row >
 
-        <v-col v-for="(item, index) in items[0]" :key="index" class="col-4">
+        <v-col v-for="(item, index) in items[0]" :key="index" class="col-md-4 col-lg-3 col-sm-6">
           <v-card class="mx-auto" max-width="400" >
             <v-img class="white--text align-end" height="200px" :src=" item.url">
               <v-card-title class="text-capitalize">{{ item.title }}</v-card-title>
