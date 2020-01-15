@@ -1,40 +1,70 @@
 <template>
   <div class="home">
-    <h1>Homepage</h1>
     
-    <v-btn class="pink white--text">click me</v-btn>
-    <v-btn depressed color="pink">click me</v-btn>
-    <v-btn text color="pink">click me</v-btn>
+    <v-container>
 
-    <v-btn depressed class="pink white--text">
-      <v-icon left>email</v-icon>
-      <span>email me</span>
-    </v-btn>
+      <v-row >
 
-    <v-btn depressed small class="pink white--text">
-      <v-icon left small>email</v-icon>
-      <span>email me</span>
-    </v-btn>
+        <v-col v-for="(item, index) in items[0]" :key="index" class="col-4">
+          <v-card class="mx-auto" max-width="400" >
+            <v-img class="white--text align-end" height="200px" :src=" item.url">
+              <v-card-title class="text-capitalize">{{ item.title }}</v-card-title>
+            </v-img>
 
-    <v-btn depressed large class="pink white--text">
-      <span>email me</span>
-      <v-icon right large>email</v-icon>
-    </v-btn>
+            <v-card-subtitle class="pb-0">Article {{ index+1 }}</v-card-subtitle>
 
-    <v-btn fab depressed small dark color="purple">
-      <v-icon>favorite</v-icon>
-    </v-btn>
+            <v-card-text class="text--primary">
+
+              <div>{{item.title}}</div>
+
+              <a>{{item.thumbnailUrl}}</a>
+            </v-card-text>
+
+            <v-card-actions>
+              <v-btn color="blue" text>
+                View
+              </v-btn>
+
+              <v-btn color="blue" text>
+                Share
+              </v-btn>
+
+            </v-card-actions>
+          </v-card>
+        </v-col>
+
+      </v-row>
+
+    </v-container>
   
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import axios from 'axios'
 
 export default {
   name: 'home',
   components: {
 
+  },
+  data() {
+    return {
+      items: []
+    }
+  },
+
+  mounted () {
+    axios.get('https://jsonplaceholder.typicode.com/photos').then(response => (this.items.push(response.data.slice(1, 15))))
+
+  },
+
+  created () {
+    this.items.slice(1, 15)
+
+    console.log(this.items)
   }
+  
 }
 </script>
