@@ -1,0 +1,24 @@
+{
+    "items": [
+        {
+            "image": "logo.png",
+            "name": "item 1",
+            "details": "lorem ipsum dolor v-for pour les afficher sous forme de list"
+        },
+        {
+            "image": "logo.png",
+            "name": "item 2",
+            "details": "lorem ipsum dolor v-for pour les afficher sous forme de list"
+        },
+        {
+            "image": "logo.png",
+            "name": "item 3",
+            "details": "lorem ipsum dolor v-for pour les afficher sous forme de list"
+        },
+        {
+            "image": "logo.png",
+            "name": "item 4",
+            "details": "lorem ipsum dolor v-for pour les afficher sous forme de list"
+        }
+    ]
+}

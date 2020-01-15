@@ -4,7 +4,7 @@
       <v-toolbar dark prominent src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg">
         <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-        <v-toolbar-title>Color Test</v-toolbar-title>
+        <v-toolbar-title>Axios Test</v-toolbar-title>
 
         <v-spacer></v-spacer>
 
@@ -16,6 +16,9 @@
 
     <v-content>
       <router-view></router-view>
+
+      <items></items>
+
     </v-content>
     
   </v-app>
@@ -23,10 +26,13 @@
 
 <script>
 
+import Items from "./components/Items";
+
 export default {
   name: 'App',
 
   components: {
+    'items': Items,
   },
 
   data: () => ({
