@@ -23,7 +23,7 @@
             
            <v-list-item two-line class="primary pa-5 ">
                 <v-list-item-avatar>
-                    <img src="https://randomuser.me/api/portraits/men/81.jpg">
+                    <img src="@/assets/code.jpg">
                 </v-list-item-avatar>
 
                 <v-list-item-content>
