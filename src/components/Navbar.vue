@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <v-app-bar absolute app class="primary" >
+        <v-app-bar flat absolute app class="primary" >
             <v-app-bar-nav-icon class="white--text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
             
             <v-toolbar-title app class="text-uppercase font-weight-medium white--text">
