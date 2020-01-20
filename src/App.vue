@@ -1,5 +1,5 @@
 <template>
-  <v-app class="grey lighten-4">
+  <v-app style="background: rgba(237, 231, 246, 1);">
 
     <Navbar />
 

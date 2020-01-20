@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <v-toolbar fixed app class="primary" >
+        <v-app-bar absolute app class="primary" >
             <v-app-bar-nav-icon class="white--text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
             
             <v-toolbar-title app class="text-uppercase font-weight-medium white--text">
@@ -13,13 +13,13 @@
                 <v-icon>mdi-magnify</v-icon>
             </v-btn>
 
-            <v-btn flat text color="white">
+            <v-btn text color="white">
                 <span>Sign Out</span>
                 <v-icon right>exit_to_app</v-icon>
             </v-btn>
-        </v-toolbar>
+        </v-app-bar>
 
-         <v-navigation-drawer fixed app temporary v-model="drawer" width="325" class="deep-purple lighten-5">
+         <v-navigation-drawer  app absolute v-model="drawer" width="325" class="deep-purple lighten-5">
             
            <v-list-item two-line class="primary pa-5 ">
                 <v-list-item-avatar>
